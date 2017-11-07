@@ -1,0 +1,33 @@
+
+
+/*===================
+	Profile styling 
+====================*/
+body{
+ background: url("../image/landing.png") no-repeat center center fixed; 
+	
+}
+
+
+
+
+/* Design 1*/
+.design1{
+	position:absolute;
+	top:380px;
+	left:340px;
+	border:none;
+	background:transparent;
+	color:gray;
+	cursor:pointer;
+	outline:none;
+	padding:5%;
+	padding-top:1%;
+	padding-bottom:1%;
+	border:1px solid lightgray;
+}
+.design1:hover{
+	opacity:0.8;
+	background:gray;
+	color:white;
+}

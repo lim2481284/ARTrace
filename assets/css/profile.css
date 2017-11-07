@@ -1,0 +1,95 @@
+
+
+/*===================
+	Profile styling 
+====================*/
+body{
+ background: url("../image/bg.png") no-repeat center center fixed; 
+	
+	
+}
+.profileSection{
+	width:80%;
+	margin-top:10%;
+	margin:auto;
+}
+
+.profileImg,
+.profileField{
+	 margin: 0 auto;
+	text-align:center;
+	margin-bottom:10%;
+}
+
+.profileImg img{
+	width:30%;
+}
+
+table{
+	margin:auto;
+	border:none;
+	width:500px;
+}
+td input,
+td select{
+	outline:none;
+	width:100%;
+	border:none;
+	border-bottom:1px solid gray;
+	padding-bottom:2%;
+}
+tr td:first-child{
+	font-size:100%;
+	font-weight:500;
+	text-align:left;
+	width:25%;
+	padding-top:1%;
+	color:white;
+}
+.fieldTable tr td{
+	height:50px;
+}
+.editBtn{
+	margin-top:5%;
+	cursor:pointer;
+	font-size:150%;
+}
+
+.themeButton{
+	outline:none;
+	background:transparent;
+	border:none;
+	background:#3498DB;
+	border-radius:30px;
+	padding:1.5%;
+	color:white;
+	font-weight:600;
+}
+
+
+.themeButton2{
+	outline:none;
+	background:transparent;
+	border:none;
+	background:#3498DB;
+	padding:1.5%;
+	color:white;
+	margin-top:2%;
+	font-weight:600;
+	width:500px;
+}
+
+/* Design 1*/
+.design1{
+	border:none;
+	background:#95D3FF;
+	color:white;
+	cursor:pointer;
+	outline:none;
+	padding:5%;
+	padding-top:1%;
+	padding-bottom:1%;
+}
+.design1:hover{
+	opacity:0.8;
+}

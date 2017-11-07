@@ -1,3 +1,6 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
 #video{
 	height:100%;
 	width:100%;
@@ -9,6 +12,8 @@ body{
 	overflow:hidden;
 	margin:0;
 	background:black;
+	 font-family: 'Quicksand', sans-serif;
+	 
 }
 
 .displayBox{
@@ -21,7 +26,7 @@ body{
 }
 
 #infoDisplay{
-	font-family:"Arial" , sans-serif;
+	 font-family: 'Quicksand', sans-serif;
 	height:100%;
 	color:color:#454545;
 	width:35%;
@@ -38,9 +43,7 @@ body{
     background: #FF0000;
 }
 
-
 li{
-	
     list-style: none;
     text-decoration: none;
     margin-bottom: 25%;
@@ -54,11 +57,159 @@ li{
     padding-left: 10%;
 }
 
+/* Design 1*/
+.design1{
+	border:none;
+	background:#95D3FF;
+	color:white;
+	cursor:pointer;
+	outline:none;
+	padding:5%;
+	padding-top:1%;
+	padding-bottom:1%;
+}
+.design1:hover{
+	opacity:0.8;
+}
 
 .begin{
-	
+	display:block;
 	margin-top: 50%;
     border-bottom: none;
     font-weight: bold;
     font-size: 200%;
+}
+
+
+input[type=checkbox] { display:none; } /* to hide the checkbox itself */
+input[type=checkbox] + label:before {
+  font-family: FontAwesome;
+  display: inline-block;
+}
+
+input[type=checkbox] + label:before { content: "\f096"; } /* unchecked icon */
+input[type=checkbox] + label:before { letter-spacing: 10px; } /* space between checkbox and label */
+
+input[type=checkbox]:checked + label:before { content: "\f046"; } /* checked icon */
+input[type=checkbox]:checked + label:before { letter-spacing: 5px; } /* allow space for check mark */
+
+.displayInfoLabel{
+	width:150px;
+}
+
+.container,
+.setting{
+	overflow:auto;
+}
+
+html {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  color: #ccc;
+}
+
+
+html::before,
+html::after,
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: .5vmin;
+  height: .5vmin;
+  border-radius: 50%;
+  color: transparent;
+}
+
+h1 {
+  margin-left: -5%;
+  height: 12vmin;
+  width: 120vmin;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+h1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: -26vmin;
+  left: 29vmin;
+  width: 62vmin;
+  height: 62vmin;
+  border-radius: 50%;
+  border: 1.3vmin solid currentColor;
+  box-sizing: border-box;
+}
+
+em {
+  font-family: 'Josefin Sans', sans-serif;
+  color: currentColor;
+  font-size: 15vmin;
+  position: relative;
+  font-style: normal;
+  width: 20vmin;
+  text-align: center;
+}
+
+em.planet {
+  -webkit-animation: planet-rotate 4s linear infinite;
+  animation: planet-rotate 4s linear infinite;
+  position: relative;
+}
+
+em.planet::before {
+  content: "";
+  position: absolute;
+  top: -.5vmin;
+  left: 3.5vmin;
+  z-index: -1;
+  width: 13vmin;
+  height: 13vmin;
+  border-radius: 50%;
+  background: trasparent;
+}
+
+em.planet.left {
+  -webkit-transform-origin: 40vmin 5vmin;
+  transform-origin: 40vmin 5vmin;
+}
+
+em.planet.right {
+  -webkit-transform-origin: -20vmin 5vmin;
+  transform-origin: -20vmin 5vmin;
+}
+
+@-webkit-keyframes planet-rotate {
+  to {
+    -webkit-transform: rotate(1turn);
+  }
+}
+
+@keyframes planet-rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+.notFound{
+  font-family: 'Josefin Sans', sans-serif;
+	text-align:center;
+	text-transform:uppercase;
+	position:absolute;
+	padding-top: 12%;
 }

@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+	<head>				
+		<!--meta list-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			
+		<!--css for this page -->		
+		<link href="assets/css/profile.css" rel="stylesheet" type="text/css" media="all"/>	
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css"> 	
+	</head>
+	<body>	
+		<div class='profileSection'>
+			<div class='profileImg col-sm-12'> 
+				<div class= 'col-sm-12'> 
+					<br><br>
+					<img src='assets/image/profile.png'/>
+				</div>
+				<div class='col-sm-12'>
+				<br>
+					<button class='themeButton'> Change Picture </button>
+				</div>
+			</div>	
+			<div class='profileField col-sm-12'> 
+				<table class='fieldTable'>
+					<tr>
+						<td>Name</td>
+						<td><input type='text' class='namev'  value='example'></td>
+					</tr>
+					<tr>
+						<td>Age</td>
+						<td><input type='text' class='agev' ></td>
+					</tr>
+					<tr>
+						<td>Gender</td>
+						<td>
+							<select>
+								<option> male </option>
+								<option> female </option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Main Skill</td>
+						<td><input class='skillv' type='text' value='Web development '></td>
+					</tr>
+
+					<tr>
+						<td>Current Task</td>
+						<td><input type='text' class='ctaskv' ></td>
+					</tr>
+					<tr>
+						<td>Previous Task</td>
+						<td><input type='text'  class='ptaskv' disabled value='React Project UI Design'></td>
+					</tr>
+					<tr>
+						<td>Level</td>
+						<td><input type='text' class='levelv' disabled value='15'></td>
+					</tr>
+					<tr>
+						<td>EXP</td>
+						<td><input type='text' class='expv'  disabled value='9095'></td>
+					</tr>
+					<tr>
+						<td>Status</td>
+						<td><input type='text' class='statusv'  disabled value='active'></td>
+					</tr>
+					<tr>
+						<td>Role</td>
+						<td><input type='text' class='rolev'  disabled value='Software Developer'></td>
+					</tr>
+
+				</table>
+				<button class='themeButton2'> Update profile </button>
+			</div>
+		</div>
+
+	</body>
+	
+	<!--script for this page -->	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="assets/js/main.js"></script>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
+	<script>
+	$(document).ready(function() {
+
+		if(localStorage.getItem("levelv"))
+			$('.levelv').val(localStorage.getItem("levelv"));
+		if(localStorage.getItem("namev"))
+			$('.namev').val(localStorage.getItem("namev"));
+		if(localStorage.getItem("agev"))
+			$('.agev').val(localStorage.getItem("agev"));
+		if(localStorage.getItem("statusv"))
+			$('.statusv').val(localStorage.getItem("statusv"));
+		if(localStorage.getItem("genderv"))
+			$('.genderv').val(localStorage.getItem("genderv"));
+		if(localStorage.getItem("rolev"))
+			$('.rolev').val(localStorage.getItem("rolev"));
+		if(localStorage.getItem("ptaskv"))
+			$('.ptaskv').val(localStorage.getItem("ptaskv"));
+		if(localStorage.getItem("ctaskv"))
+			$('.ctaskv').val(localStorage.getItem("ctaskv"));
+		if(localStorage.getItem("skillv"))
+			$('.skillv').val(localStorage.getItem("skillv"));
+		
+	});
+	
+	$('.themeButton2').click(function() {
+		swal ( "Update Success" ,  "" ,  "success" )
+		localStorage.setItem("levelv", '13');
+		
+		localStorage.setItem("expv", '9500');
+		
+		localStorage.setItem("namev", $('.namev').val());
+		
+		localStorage.setItem("agev", $('.agev').val());
+		
+		localStorage.setItem("genderv", "Male");
+		
+		localStorage.setItem("statusv",'Active' );
+		
+		localStorage.setItem("rolev", 'Web Developer' );
+		
+		localStorage.setItem("ptaskv",'React Native UI design' );
+		
+		localStorage.setItem("ctaskv", $('.ctaskv').val());
+		
+		localStorage.setItem("skillv", $('.skillv').val());
+	
+	});
+	
+	</script>
+	
+</html>               

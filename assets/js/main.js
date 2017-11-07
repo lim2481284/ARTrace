@@ -22,6 +22,8 @@ window.onload = function() {
 		}
 		
 		function play() {
+			
+			$('.load').hide();	
 			compatibility.requestAnimationFrame(play);
 			if (video.paused) video.play();
           	
@@ -50,10 +52,7 @@ window.onload = function() {
 					// Display infoDisplayBox overlay: 
 					infoDisplayBox.style.left    ='0%';
 					infoDisplayBox.style.bottom     = '0%';
-					$('#infoDisplay').animate({
-						opacity: 1
-					  }, 2000, function() {
-					 });
+					infoDisplayBox.style.opacity = 1; 
 					
 					var coord = coords[0];
 					for (var i = coords.length - 1; i >= 0; --i)
@@ -64,12 +63,73 @@ window.onload = function() {
 					if (fist_pos_old) {
 						var dx = (fist_pos[0] - fist_pos_old[0]) / video.videoWidth,
 								dy = (fist_pos[1] - fist_pos_old[1]) / video.videoHeight;
-							document.getElementById("infoDisplay").scrollTop = dy*1000;
-							document.getElementById("infoDisplay").scrollLeft = dx*1000;
+							document.getElementById("infoDisplay").scrollTop = dy*1500;
+							document.getElementById("infoDisplay").scrollLeft = dx*1500;
 					} else fist_pos_old = fist_pos;
 					
+					
+					if(localStorage.getItem("levelv"))
+						$('.levelv').html(localStorage.getItem("levelv"));
+					if(localStorage.getItem("namev"))
+						$('.namev').html(localStorage.getItem("namev"));
+					if(localStorage.getItem("agev"))
+						$('.agev').html(localStorage.getItem("agev"));
+					if(localStorage.getItem("statusv"))
+						$('.statusv').html(localStorage.getItem("statusv"));
+					if(localStorage.getItem("genderv"))
+						$('.genderv').html(localStorage.getItem("genderv"));
+					if(localStorage.getItem("rolev"))
+						$('.rolev').html(localStorage.getItem("rolev"));
+					if(localStorage.getItem("ptaskv"))
+						$('.ptaskv').html(localStorage.getItem("ptaskv"));
+					if(localStorage.getItem("ctaskv"))
+						$('.ctaskv').html(localStorage.getItem("ctaskv"));
+					if(localStorage.getItem("skillv"))
+						$('.skillv').html(localStorage.getItem("skillv"));
+					if(localStorage.getItem("expv"))
+						$('.expv').html(localStorage.getItem("expv"));
+					if(localStorage.getItem("level")==0)
+						$('.level').hide();
+					else 
+						$('.level').show();
+					if(localStorage.getItem("exp")==0)
+						$('.exp').hide();
+					else 
+						$('.exp').show();	
+					if(localStorage.getItem("name")==0)
+						$('.name').hide();
+					else 
+						$('.name').show();	
+					if(localStorage.getItem("age")==0)
+						$('.age').hide();
+					else 
+						$('.age').show();	
+					if(localStorage.getItem("gender")==0)
+						$('.gender').hide();
+					else 
+						$('.gender').show();	
+					if(localStorage.getItem("status")==0)
+						$('.status').hide();
+					else 
+						$('.status').show();	
+					if(localStorage.getItem("role")==0)
+						$('.role').hide();
+					else 
+						$('.role').show();	
+					if(localStorage.getItem("ptask")==0)
+						$('.ptask').hide();
+					else 
+						$('.ptask').show();	
+					if(localStorage.getItem("ctask")==0)
+						$('.ctask').hide();
+					else 
+						$('.ctask').show();	
+					if(localStorage.getItem("skill")==0)
+						$('.skill').hide();
+					else 
+						$('.skill').show();
 				} else {
-					var opacity = infoDisplayBox.style.opacity - 0.1;
+					var opacity = infoDisplayBox.style.opacity - 0.01;
 					infoDisplayBox.style.opacity = opacity > 0 ? opacity : 0;
 				}	
 
@@ -109,8 +169,66 @@ window.onload = function() {
 				} 
 			}
 		}
-	};
+};
 				
+				
+$(document).ready(function() {
+	if(localStorage.getItem("level")==0)
+		$('.level').hide();
+		
+	if(localStorage.getItem("exp")==0)
+		$('.exp').hide();
+		
+	if(localStorage.getItem("name")==0)
+		$('.name').hide();
+		
+	if(localStorage.getItem("age")==0)
+		$('.age').hide();
+		
+	if(localStorage.getItem("gender")==0)
+		$('.gender').hide();
+		
+	if(localStorage.getItem("status")==0)
+		$('.status').hide();
+		
+	if(localStorage.getItem("role")==0)
+		$('.role').hide();
+		
+	if(localStorage.getItem("ptask")==0)
+		$('.ptask').hide();
+		
+	if(localStorage.getItem("ctask")==0)
+		$('.ctask').hide();
+		
+	if(localStorage.getItem("skill")==0)
+		$('.skill').hide();
+
+	
+	
+	if(localStorage.getItem("levelv"))
+		$('.levelv').html(localStorage.getItem("levelv"));
+	if(localStorage.getItem("namev"))
+		$('.namev').html(localStorage.getItem("namev"));
+	if(localStorage.getItem("agev"))
+		$('.agev').html(localStorage.getItem("agev"));
+	if(localStorage.getItem("statusv"))
+		$('.statusv').html(localStorage.getItem("statusv"));
+	if(localStorage.getItem("genderv"))
+		$('.genderv').html(localStorage.getItem("genderv"));
+	if(localStorage.getItem("rolev"))
+		$('.rolev').html(localStorage.getItem("rolev"));
+	if(localStorage.getItem("ptaskv"))
+		$('.ptaskv').html(localStorage.getItem("ptaskv"));
+	if(localStorage.getItem("ctaskv"))
+		$('.ctaskv').html(localStorage.getItem("ctaskv"));
+	if(localStorage.getItem("skillv"))
+		$('.skillv').html(localStorage.getItem("skillv"));
+	if(localStorage.getItem("expv"))
+		$('.expv').html(localStorage.getItem("expv"));
+	
+	
+});	
+		
 				/*
 				
 				//Image capture 

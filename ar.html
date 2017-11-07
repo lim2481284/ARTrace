@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>AR Solution</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	 <script src="http://danml.com/js/download.js"></script>
+	<script src="assets/js/compatibility.js"></script>
+	<script src="assets/js/smoother.js"></script>
+	<script src="assets/js/objectdetect.js"></script>
+	<script src="assets/js/objectdetect.frontalface_alt.js"></script>
+	<script src="assets/js/objectdetect.handfist.js"></script>
+	<script src="assets/js/main.js"></script>
+	
+	<link rel="stylesheet" href="assets/css/main.css"> 	
+	
+</head>
+
+<body>
+<div class='load'>
+<h1>
+	  <em></em>
+	  <em class="planet left">o</em>
+	  <em style="margin-left:14%; font-size:90%;">Loading...</em>
+	  <em> </em>
+	  <em class="planet right">o</em>
+	  <em></em>
+	  <label class='notFound'>
+	  </label>  
+</h1>
+</div>
+<div id="output"></div>
+	<div class='displayBox'> 
+		<video id="video" ></video>
+		<div id='infoDisplay' style="position: absolute; display: block; opacity: 0" > 
+			<ul>
+				<li class='begin'>INFO</li>
+				<li class='name'>Name : <label class='namev'> </label></li>
+				<li class='age'>Age: <label class='agev'> </label></li>
+				<li class='gender'>Gender :   <label class='genderv'> </label></li>
+				<li class='level' >Level :   <label class='levelv'> </label></li>
+				<li class='exp' >EXP :  <label class='expv'> </label></li>
+				<li class='status'>Status :   <label class='statusv'> </label></li>
+				<li class='role'>Role :   <label class='rolev'> </label></li>
+				<li class='ptask' >Previous Task :   <label class='ptaskv'> </label></li>
+				<li class='ctask'>Current Task :   <label class='ctaskv'> </label></li>
+				<li class='skill'>Main Skill :   <label class='skillv'> </label></li>
+				
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
