@@ -1,0 +1,64 @@
+#video{
+	height:100%;
+	width:100%;
+	margin:0%;
+	padding:0;
+}
+
+body{
+	overflow:hidden;
+	margin:0;
+	background:black;
+}
+
+.displayBox{
+	height: 669px;
+    width: 890px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#infoDisplay{
+	font-family:"Arial" , sans-serif;
+	height:100%;
+	color:color:#454545;
+	width:35%;
+	overflow-y:auto;
+	
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+
+li{
+	
+    list-style: none;
+    text-decoration: none;
+    margin-bottom: 25%;
+    padding-bottom: 10%;
+    color: white;
+    text-shadow: 1px 1px 1px grey;
+    font-size: 120%;
+    font-weight: 300;
+    font-family: 'Enriqueta', arial, serif;
+    border-bottom: 1px solid white;
+    padding-left: 10%;
+}
+
+
+.begin{
+	
+	margin-top: 50%;
+    border-bottom: none;
+    font-weight: bold;
+    font-size: 200%;
+}
